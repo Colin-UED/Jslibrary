@@ -1,0 +1,58 @@
+{
+  "name": "jdf",
+  "description": "京东前端开发集成解决方案",
+  "version": "1.8.42",
+  "author": {
+    "name": "jdf",
+    "email": "putaoshu@126.com"
+  },
+  "homepage": "https://github.com/putaoshu/jdf",
+  "keywords": [
+    "jdf"
+  ],
+  "license": "MIT",
+  "bin": {
+    "jdf": "bin/jdf"
+  },
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/putaoshu/jdf.git"
+  },
+  "bugs": {
+    "url": "http://github.com/putaoshu/jdf/issues"
+  },
+  "preferGlobal": true,
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "atropa-jslint": "0.1.2",
+    "babel-core": "^6.3.17",
+    "clean-css": "2.1.8",
+    "colors": "1.0.2",
+    "csslint": "0.10.0",
+    "expect.js": "0.3.1",
+    "ftp": "0.3.6",
+    "html-minifier": "0.6.9",
+    "htmllint": "0.0.7",
+    "iconv-lite": "^0.4.10",
+    "jdf-images": "^1.0.2",
+    "jdf-png-native": "^1.0.1",
+    "jdf-sass": "^1.0.13",
+    "jdf-ws": "^1.0.3",
+    "js-beautify": "1.5.4",
+    "jsmart": "^2.14.0",
+    "less": "2.5.3",
+    "node-watch": "0.3.4",
+    "q": "1.0.1",
+    "simple-prompt": "0.2.1",
+    "tar": "0.1.19",
+    "uglify-js": "2.4.12",
+    "velocityjs": "0.4.3"
+  }
+}
