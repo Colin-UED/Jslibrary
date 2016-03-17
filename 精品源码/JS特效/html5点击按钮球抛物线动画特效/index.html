@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery抛物线运动轨迹动画特效</title>
+
+<style type="text/css">
+.btns{text-align:center;}
+.btns a{
+	color:#fff;padding:5px 10px;font-family:Arial;
+	background-color:#f90;text-decoration:none;
+}
+.boll {
+	width: 50px;
+	height: 50px;
+	background-color: #ff3333;
+	position: absolute;
+	top: 380px;
+	left: 100px;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+}
+#youxi{
+    width: 50px;
+    height: 50px;
+    background: #000;
+    margin: 0 auto;
+}
+.target {
+	width: 100%;
+	height: 50px;
+    text-align: center;
+	background-color: #CDCDCD;
+	position: absolute;
+    bottom:0;
+	left: 0;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+}
+</style>
+
+<script type="text/javascript" src="http://test.static.sanjieke.com/libs/jquery.min.js"></script>
+<script type="text/javascript" src="js/parabola.js"></script>
+
+</head>
+
+<body>
+
+<div class="btns" style="margin-top:20px">
+    <a href="javascript:;" id="run">run</a>
+    <a href="javascript:;" id="reset">reset</a>    
+    <a href="javascript:;" id="stop">stop</a>
+    <a href="javascript:;" id="setOptions">setOptions</a>
+</div>
+<div id="boll" class="boll"></div>
+<div id="target" class="target">
+    <div id="youxi"></div>
+</div>
+
+<script type="text/javascript">
+var bool = new Parabola({
+	el: "#boll",
+	offset: [300, 100],
+	curvature: 0.005,
+	duration: 3000,
+	callback:function(){
+		alert("完成后回调")
+	},
+	stepCallback:function(x,y){
+		console.log(x,y);
+	}
+});
+bool.setOptions({
+	targetEl: $("#youxi"),
+	curvature: 0.001,
+	duration: 200
+});
+$("#reset").click(function () {
+	bool.reset()
+});
+$("#run").click(function () {
+	bool.start();
+});
+$("#stop").click(function () {
+	bool.stop();
+});
+</script>
+
+</body>
+</html>
